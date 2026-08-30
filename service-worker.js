@@ -1,4 +1,4 @@
-const CACHE_NAME = "ab-player-v1";
+const CACHE_NAME = "ab-player-minimal-v1";
 
 const FILES_TO_CACHE = [
     "./",

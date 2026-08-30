@@ -1,7 +1,7 @@
 {
-    "name": "AB Player",
-    "short_name": "AB Player",
-    "description": "Player audio pentru repetarea fragmentelor A-B",
+    "name": "AB Player Mininal",
+    "short_name": "AB Player Minimal",
+    "description": "Player audio si video pentru repetarea fragmentelor A-B",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#eef1f5",

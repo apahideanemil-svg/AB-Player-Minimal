@@ -7,6 +7,8 @@
     <title>AB Player Minimal</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2764d8"> 
 </head>
 
 <body>
@@ -88,5 +90,12 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("./service-worker.js");
+        });
+    }
+</script>
 </body>
 </html>
