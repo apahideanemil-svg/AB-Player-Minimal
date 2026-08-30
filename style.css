@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    overflow: hidden;
+}
+
+.player {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px;
+    gap: 8px;
+}
+
+.top-bar {
+    height: 28px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 6px;
+
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.time-info {
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.file-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.75;
+}
+
+.media-area {
+    position: relative;
+
+    flex: 1;
+    width: 100%;
+
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+    background: #111;
+}
+
+.video-player {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #000;
+}
+
+.play-button {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    border-radius: 18px;
+
+    background: #2764d8;
+    color: white;
+
+    font-size: clamp(70px, 20vw, 180px);
+    font-weight: bold;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+}
+
+.media-area.video-mode .video-player {
+    display: block;
+}
+
+.media-area.video-mode .play-button {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0);
+
+    z-index: 2;
+}
+
+.play-button:active {
+    transform: scale(0.99);
+}
+
+.controls {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.button-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.control-button {
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2c2c2c;
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+}
+
+.control-button:active {
+    transform: scale(0.97);
+    background: #444;
+}
+
+#buttonA.active {
+    background: #1f8f4e;
+}
+
+#buttonB.active {
+    background: #d97706;
+}
