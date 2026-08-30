@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AB Player Minimal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="player">
+
+        <div class="top-bar">
+            <span class="time-info">
+                <span id="currentTime">00:00.0</span>
+                /
+                <span id="duration">00:00.0</span>
+            </span>
+
+            <span id="fileName" class="file-name">
+                Niciun fișier
+            </span>
+        </div>
+
+        <div class="media-area">
+
+        <audio id="audio"></audio>
+        <video
+            id="video"
+            class="video-player"
+            playsinline
+         ></video>
+
+    <button id="playPauseButton" class="play-button">
+        ▶
+    </button>
+
+</div>
+
+        <div class="controls">
+            <div class="button-row">
+                <label for="fileInput" class="control-button">
+                    O
+                </label>
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept="audio/*,video/*"
+                    hidden
+                >
+
+                <button id="buttonA" class="control-button">
+                    A
+                </button>
+
+                <button id="buttonB" class="control-button">
+                    B
+                </button>
+
+                <button id="resetButton" class="control-button">
+                    R
+                </button>
+            </div>
+
+            <div class="button-row">
+                <button id="back5Button" class="control-button">
+                    −5
+                </button>
+
+                <button id="back1Button" class="control-button">
+                    −1
+                </button>
+
+                <button id="forward1Button" class="control-button">
+                    +1
+                </button>
+
+                <button id="forward5Button" class="control-button">
+                    +5
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
