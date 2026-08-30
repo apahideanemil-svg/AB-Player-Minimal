@@ -348,15 +348,15 @@ function attachMediaEvents(element) {
         }
     );
 
-    element.addEventListener(
-        "ended",
-        function () {
-            if (media === element) {
-                playPauseButton.textContent =
-                    "▶";
-            }
+   element.addEventListener(
+    "ended",
+    function () {
+        if (media === element) {
+            media.currentTime = 0;
+            media.play();
         }
-    );
+    }
+);
 }
 
 
