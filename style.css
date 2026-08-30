@@ -128,30 +128,30 @@ body {
     display: flex;
     flex-direction: column;
 
-    gap: 8px;
+    gap: 2px;
 }
 
 .button-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2px;
 }
 
 .control-button {
-    height: 56px;
+    height: 28px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     border: none;
-    border-radius: 12px;
+    border-radius: 6px;
 
     background: #2c2c2c;
     color: white;
 
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 11px;
+    font-weight: normal;
 
     cursor: pointer;
 
